@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    background-image: url('/img/bg-desktop.png');
+    background-image: url('./img/bg-desktop.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -133,7 +133,7 @@ button {
 @media (max-width: 480px) {
 
     .container {
-        background-image: url('/img/bg-mobile.png');
+        background-image: url('./img/bg-mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
