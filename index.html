@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Confirmação de Presença</title>
+</head>
+<body>
+
+    <!-- TELA DO FORMULÁRIO -->
+    <section id="form-screen" class="screen active">
+        <form id="rsvp-form" novalidate>
+            <h1>Confirme sua presença!</h1>
+
+            <label for="name">
+                Seu nome
+                <input 
+                    type="text" 
+                    id="name" 
+                    required 
+                    autocomplete="name"
+                />
+            </label>
+
+            <label for="willGo">
+                Você vai ao aniversário?
+                <select id="willGo" required>
+                    <option value="">Selecione</option>
+                    <option value="Vou">Vou</option>
+                    <option value="Não vou">Não vou</option>
+                </select>
+            </label>
+
+            <!-- BRINCADEIRA -->
+            <div id="brincadeira-box" class="hidden">
+                <label>
+                    Vegano / vegetariano? 🌱 
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </label>
+
+                <label>
+                    Intolerante a lactose? 🚽
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </label>
+
+                <label>
+                    Intolerante a glúten? 🍝
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </label>
+
+                <label>
+                    Bebe bebidas alcoólicas? 🍺🍸
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </label>
+
+                <label>
+                    Usa drogas? 💉
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- TELA DE LOADING -->
+    <section id="loading-screen" class="screen" aria-hidden="true">
+        <div class="loader"></div>
+        <p id="paragraph-loader">Enviando confirmações…</p>
+    </section>
+
+    <!-- TELA FINAL -->
+    <section id="result-screen" class="screen" aria-hidden="true">
+        <p id="result-message"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
