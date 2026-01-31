@@ -8,6 +8,22 @@
     font-family: "Poppins", sans-serif;
 }
 
+.flag-brazil {
+    width: 110px;
+    position: absolute;
+    display: flex;
+    top: 45px;
+    right: 70px;
+}
+
+.img-dede {
+    width: 120px;
+    position: absolute;
+    display: flex;
+    bottom: 35px;
+    right: 105px;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -35,7 +51,7 @@
 
 form {
     background: #fff6e8;
-    border: 3px solid #f55854;
+    border: 3px solid #002472;
     padding: 30px;
     border-radius: 18px;
 }
@@ -47,10 +63,6 @@ h1 {
     text-align: center;
 }
 
-/* ===============================
-   LABEL PADRÃO
-=============================== */
-
 label {
     display: flex;
     flex-direction: column;
@@ -59,10 +71,6 @@ label {
     font-weight: 500;
     color: #6b7280;
 }
-
-/* ===============================
-   INPUTS
-=============================== */
 
 input {
     margin-top: 4px;
@@ -99,10 +107,6 @@ button {
     display: none;
 }
 
-/* ===============================
-   FIELDSET / RADIOS (AJUSTADO)
-=============================== */
-
 fieldset {
     margin-bottom: 16px;
     border: none;
@@ -116,7 +120,6 @@ legend {
     margin-bottom: 8px;
 }
 
-/* container dos radios */
 .radio-group {
     display: flex;
     gap: 24px;
@@ -126,7 +129,6 @@ legend {
     border-radius: 12px;
 }
 
-/* cada opção */
 .radio-option {
     display: flex;
     align-items: center;
@@ -141,15 +143,10 @@ label.radio-option {
     margin: 0;
 }
 
-/* rádio normal, só muda cor */
 input[type="radio"] {
     accent-color: #f55854;
     margin: 0;
 }
-
-/* ===============================
-   LOADING
-=============================== */
 
 .loader {
     width: 50px;
@@ -179,10 +176,6 @@ input[type="radio"] {
     padding: 30px;
 }
 
-/* ===============================
-   MENSAGEM DE CONFIRMAÇÃO / LINK
-=============================== */
-
 #map-container {
     margin-top: 20px;
     text-align: center;
@@ -208,10 +201,6 @@ input[type="radio"] {
     background: var(--btn-hover-bg, #222);
     transform: translateY(-2px);
 }
-
-/* ===============================
-   MOBILE
-=============================== */
 
 @media (max-width: 480px) {
 
