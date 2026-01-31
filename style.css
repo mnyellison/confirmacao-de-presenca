@@ -8,22 +8,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-.flag-brazil {
-    width: 110px;
-    position: absolute;
-    display: flex;
-    top: 50px;
-    right: 70px;
-}
-
-.img-dede {
-    width: 140px;
-    position: absolute;
-    display: flex;
-    bottom: 10px;
-    right: 105px;
-}
-
 .container {
     min-height: 100vh;
     display: flex;
