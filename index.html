@@ -8,95 +8,159 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- TELA DO FORMULÁRIO -->
-        <section id="form-screen" class="screen active">
-            <form id="rsvp-form" novalidate>
-                <h1>Confirme sua presença!</h1>
+<div class="container">
 
-                <label for="name">
-                    Seu nome
-                    <input 
-                        type="text" 
-                        id="name" 
-                        required 
-                        autocomplete="name"
-                    />
-                </label>
+    <!-- TELA DO FORMULÁRIO -->
+    <section id="form-screen" class="screen active">
+        <form id="rsvp-form" novalidate>
+            <h1>Confirme sua presença!</h1>
 
-                <label for="willGo">
-                    Você vai ao aniversário?
-                    <select id="willGo" required>
-                        <option value="">Selecione</option>
-                        <option value="Vou">Vou</option>
-                        <option value="Não vou">Não vou</option>
-                    </select>
-                </label>
+            <!-- NOME -->
+            <label for="name">
+                Seu nome
+                <input 
+                    type="text" 
+                    id="name" 
+                    required 
+                    autocomplete="name"
+                />
+            </label>
 
-                <!-- BRINCADEIRA -->
-                <div id="brincadeira-box" class="hidden">
-                    <label>
-                        Vegano / vegetariano? 🌱 
-                        <select required>
-                            <option value="">Selecione</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
+            <!-- VAI AO ANIVERSÁRIO -->
+            <fieldset>
+                <legend>Você vai ao aniversário?</legend>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="willGo" value="Vou" required>
+                        <span>Vou</span>
                     </label>
 
-                    <label>
-                        Intolerante a lactose? 🚽
-                        <select required>
-                            <option value="">Selecione</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Intolerante a glúten? 🍝
-                        <select required>
-                            <option value="">Selecione</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Bebe bebidas alcoólicas? 🍺🍸
-                        <select required>
-                            <option value="">Selecione</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Usa drogas? 💉
-                        <select required>
-                            <option value="">Selecione</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
+                    <label class="radio-option">
+                        <input type="radio" name="willGo" value="Não vou">
+                        <span>Não vou</span>
                     </label>
                 </div>
+            </fieldset>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+            <!-- BRINCADEIRA -->
+            <div id="brincadeira-box" class="hidden">
 
-        <!-- TELA DE LOADING -->
-        <section id="loading-screen" class="screen" aria-hidden="true">
-            <div class="loader"></div>
-            <p id="paragraph-loader">Enviando confirmações…</p>
-        </section>
+                <fieldset>
+                    <legend>Vegano / vegetariano? 🌱</legend>
 
-        <!-- TELA FINAL -->
-        <section id="result-screen" class="screen" aria-hidden="true">
-            <p id="result-message"></p>
-        </section>
-    </div>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="vegano" value="Sim" required>
+                            <span>Sim</span>
+                        </label>
 
-    <script src="script.js"></script>
+                        <label class="radio-option">
+                            <input type="radio" name="vegano" value="Não">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Intolerante a lactose? 🚽</legend>
+
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="lactose" value="Sim" required>
+                            <span>Sim</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="lactose" value="Não">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Intolerante a glúten? 🍝</legend>
+
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="gluten" value="Sim" required>
+                            <span>Sim</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="gluten" value="Não">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Bebe bebidas alcoólicas? 🍺🍸</legend>
+
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="alcool" value="Sim" required>
+                            <span>Sim</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="alcool" value="Não">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Usa drogas? 💉</legend>
+
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="drogas" value="Sim" required>
+                            <span>Sim</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="drogas" value="Não">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- TELA DE LOADING -->
+    <section id="loading-screen" class="screen" aria-hidden="true">
+        <div class="loader"></div>
+        <p id="paragraph-loader">Enviando confirmações…</p>
+    </section>
+
+    <!-- TELA FINAL -->
+    <section id="result-screen" class="screen" aria-hidden="true">
+        <p id="result-message"></p>
+
+        <!-- MENSAGEM DE LOCALIZAÇÃO DA FESTA -->
+        <p id="confirmation-message"></p>
+
+        <!-- MINI MAPA -->
+        <div id="map-container" class="hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1986.6581756476057!2d-37.34428212046623!3d-5.212892336998959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ba064d7cfa2011%3A0x895552c546e1939a!2sCondom%C3%ADnio%20Alto%20da%20Bela%20Vista%20Eco%20Residencial!5e0!3m2!1spt-BR!2sbr!4v1769823709906!5m2!1spt-BR!2sbr"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://www.google.com/maps?q=Área+de+Lazer+do+Condomínio+Alto+da+Bela+Vista" target="_blank" class="map-link">Abrir no Google Maps</a>
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
